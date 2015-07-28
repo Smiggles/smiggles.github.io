@@ -26,7 +26,12 @@
         </tr>
       </table>
     </div>
-    <div class="p0sts" id="p0sts"> {% for post in site.posts %}
+    ---
+layout: default
+---
+
+<div class="posts">
+  {% for post in site.posts %}
     <article class="post">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -37,7 +42,8 @@
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}</div>
+  {% endfor %}
+</div>
   </div>
 </div>
 </body>
